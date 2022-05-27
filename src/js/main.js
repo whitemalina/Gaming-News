@@ -25,7 +25,7 @@ createApp({
     for (let i = 0; i < this.news.length; i++) {
       let string
       let num = Math.floor(Math.random() * 5);
-      string = 'background: url("../src/img/' + num + '.jpg") center / cover no-repeat  !important'
+      string = 'background: url("src/img/' + num + '.jpg") center / cover no-repeat  !important'
       this.news[i].bg = string
     }
     
