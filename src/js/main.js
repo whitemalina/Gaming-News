@@ -6,11 +6,12 @@ const options = {
     "X-RapidAPI-Key": "bdfbeeb0b1msh85778f6f18922a0p137b2bjsn943b41484846",
   },
 };
-createApp({git init
+createApp({
   data() {
     return {
       news: [],
-      step: 3,
+      step: 23,
+      start: 3,
     };
   },
   async mounted() {
@@ -18,11 +19,12 @@ createApp({git init
       .then((response) => response.json())
       .then((response) => (this.news = response))
       .catch((err) => console.error(err));
+    this.start = 20;
     console.log("News fetched");
   },
   computed: {
     newsList() {
-      return this.news.slice(0, this.step);
+      return this.news.slice(this.start, this.step);
     },
   },
   methods: {
@@ -48,7 +50,7 @@ createApp({git init
     refresh() {
       this.step = 0;
       setTimeout(() => {
-        this.step = 3;
+        this.step = 23;
       }, 1000);
 
       console.log("Refreshed");
