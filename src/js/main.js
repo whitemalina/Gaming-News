@@ -7,7 +7,7 @@ const options = {
     "X-RapidAPI-Key": "bdfbeeb0b1msh85778f6f18922a0p137b2bjsn943b41484846",
   },
 };
-createApp({git init
+createApp({
   data() {
     return {
       news: [],
