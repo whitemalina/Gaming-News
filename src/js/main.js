@@ -14,7 +14,7 @@ createApp({git init
     };
   },
   async mounted() {
-    await fetch("https://gaming-news.p.rapidapi.com/news", options)
+    await fetch("//gaming-news.p.rapidapi.com/news", options)
       .then((response) => response.json())
       .then((response) => (this.news = response))
       .catch((err) => console.error(err));
