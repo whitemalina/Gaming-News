@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*
+    margin: 0
+    padding: 0
+*
+    scroll-behavior: smooth
+body
+    background-color: #13112E
+
+#app
+    width: 1920px
+.main
+
+    padding-top: 60px
+    height: 100vh
+    width: 100vw
+    background: url("../img/bg.png");
+    background-repeat: no-repeat
+    background-size: cover
+    
+    &__nav
+        padding-left: 170px
+        padding-right: 170px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        a
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 23px;
+            text-decoration: none
+            margin-right: 20px
+            color: rgba(226, 227, 232, 0.65);
+    // &__line
+    //     width: 39px;
+    //     height: 1px;
+    //     background-color: #a2adcc9d;
+    //     transform: rotate(90deg);
+    &__logo
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 2rem
+    &__content
+        padding-left: 170px
+        padding-right: 170px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        max-height: 50vh
+        margin-top: 50%
+        transform: translateY(-180%)
+        &__text
+            width: 50%
+            h2
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+
+                color: #4D5FFB;
+            h1
+                margin-top: 2rem
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 69px;
+                line-height: 84px;
+
+                color: #FFFFFF;
+            a
+                text-decoration: none
+            button
+                margin-top: 2rem
+                width: 302px;
+                height: 63px;
+                text-decoration: none
+                border: none
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 19px;
+                line-height: 23px;
+                display: flex
+                justify-content: center
+                align-items: center
+                color: #FFFFFF;
+                background-color: #2A4BE1
+                border-radius: 26px;
+                transition: all 0.3s ease-in-out
+                img
+                    transition: all 0.3s ease-in-out
+                    margin-left: 20px
+                &:hover
+                    cursor: pointer
+                    transform: translatex(5%)
+                    img
+                        margin-left: 50px
+
+        &__image
+            img
+                max-width: 10%
+
+.trend
+    h1
+        margin-top: 100px
+        margin-left: 200px
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 52px;
+
+        color: #FFFFFF;
+    &__games
+        margin-left: 200px
+        margin-right: 200px
+        margin-top: 70px
+        display: flex
+        width: 80%
+        &__game
+            width: 25%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            
+            .img
+                transition: all 0.3s ease-in-out
+                border-radius: 35px;
+                &:hover
+                    box-shadow: 0px 4px 56px 34px #1201ff21;
+                    transform: scale(1.05)
+                    
+            p
+                margin-top: 1rem
+                display: flex
+                justify-content: center
+                align-items: center
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 28px;
+                /* identical to box height */
+                img
+                    width: 10%
+                    margin-right: 1rem
+
+                color: #FFFFFF;
+.news
+    margin-top: 145px
+    img
+        border-radius: 8px
+        transition: all 0.3s ease-in-out
+    &__title
+        display: flex
+        margin-left: 174px
+        margin-right: 174px
+        justify-content: space-between
+        align-items: center
+        h1
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 43px;
+            line-height: 52px;
+            
+            
+            color: #FFFFFF;
+        button
+            width: 218px;
+            height: 81px;
+            border: none
+            display: flex
+            margin: none !important
+            justify-content: center
+            align-items: center
+            background: rgba(80, 77, 124, 0.29);
+            border-radius: 18px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-decoration: none
+            color: #FFFFFF;
+            img
+                margin-right: 25px
+                transition: all 0.5s ease-in-out
+            &:hover
+                cursor: pointer
+                img
+                    transform: rotate(180deg)
+    &__news
+        margin-left: 174px
+        margin-right: 174px
+        margin-top: 97px
+        display: flex
+        
+        justify-content: space-between
+        align-items: flex-start
+        
+    &__subscribe
+        margin-top: 64px
+        padding: 44px
+        width: 418px;
+        background: rgba(80, 77, 124, 0.29);
+        border-radius: 22px;
+        h1
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            margin-top: 13px
+            font-size: 32px;
+            line-height: 39px;
+            color: #FFFFFF;
+        p
+            font-family: 'Montserrat';
+            font-style: normal;
+            margin-top: 22px
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+
+            color: rgba(255, 255, 255, 0.46);
+        form
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            input
+                margin-top: 22px
+                width: 324px;
+                height: 49px;
+                border: none
+                background: #383567;
+                border-radius: 15px;
+                color: rgba(255, 255, 255, 0.34);
+                padding: 0 22px
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                &::placeholder
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    /* identical to box height */
+                    color: rgba(255, 255, 255, 0.34);
+                    padding-left: 22px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+            button
+                width: 223px;
+                height: 63px;
+                left: 1404px;
+                top: 2428px;
+
+                background: #2A4BE1;
+                border-radius: 26px;
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 27px;
+                border: none
+                margin-top: 22px
+                color: #FFFFFF;
+                transition: all 0.3s ease-in-out
+                &:hover
+                    cursor: pointer
+                    transform: scale(1.1)
+                &:focus
+                    border: none !important
+                    outline: none !important
+        &:hover
+            img
+                box-shadow: 0px 0px 30px 3px rgba(250, 158, 77, 0.45);
+    &__section
+        &__block
+            margin-top: 4rem
+            display: flex
+    button
+        border: none
+        width: 223px;
+        height: 63px;
+        //margin-top: 50px
+        background: #2A4BE1;
+        border-radius: 26px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        /* identical to box height */
+        outline: none
+
+        color: #FFFFFF;
+        transition: all 0.3s ease-in-out
+        &:hover
+            transform: scale(1.1)
+            cursor: pointer
+    .pushStep
+        border: none
+        width: 223px;
+        height: 63px;
+        margin-top: 50px
+        background: #2A4BE1;
+        border-radius: 26px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        /* identical to box height */
+        outline: none
+
+        color: #FFFFFF;
+        transition: all 0.3s ease-in-out
+        &:hover
+            transform: scale(1.1)
+            cursor: pointer
+    &__img
+        width: 360px;
+        height: 337px;
+        display: flex
+        justify-content: center
+        align-items: center
+        background: rgba(80, 77, 124, 0.39);
+        border-radius: 30px;
+    &__info
+        margin-left: 40px
+        max-width: 25vw  
+        &__category
+            width: 125px;
+            height: 49px;
+            display: flex
+            justify-content: center
+            align-items: center
+            background: rgba(80, 77, 124, 0.29);
+            border-radius: 11px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            img
+                margin-right: 11px
+        h1
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 34px;
+            margin-top: 26px
+            color: #FFFFFF;
+            // max-width: 50%
+        button
+            border: none
+            width: 223px;
+            height: 63px;
+            margin-top: 26px
+            background: #2A4BE1;
+            border-radius: 26px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            /* identical to box height */
+            outline: none
+
+            color: #FFFFFF;
+            transition: all 0.3s ease-in-out
+            &:hover
+                transform: scale(1.1)
+                cursor: pointer
+    &__source
+        margin-top: 26px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        p
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            /* identical to box height */
+
+
+            color: #FFFFFF;
+.footer
+    position: relative
+    height: 200px
+    margin-top: 100px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    p
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 41px;
+        text-align: center
+        color: #FFFFFF;
+    a
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 35px;
+        text-align: center
+        text-decoration: none
+        color: rgba(255, 255, 255, 0.24);
+    .toUp
+        position: absolute
+        bottom: 20
+        right: 150px
+        width: 114px;
+        height: 116px;
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background: #2A4BE1;
+        border-radius: 26px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height */
+        
+        
+        color: #FFFFFF;
+        img
+            transition: all 0.3s ease-in-out
+            animation: spin 1.4s infinite ease-in-out;
+        transition: all 0.3s ease-in-out
+        &:hover
+            cursor: pointer
+            transform: scale(1.1)
+@keyframes spin 
+  0% 
+    transform: translate3d(0, -5%, 0);
+  
+  50% 
+    transform: translate3d(0, 5%, 0);
+  
+  100% 
+    transform: translate3d(0, -5%, 0);
+  

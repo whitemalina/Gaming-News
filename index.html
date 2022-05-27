@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1920px,initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="src/css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Gamin-News</title>
+</head>
+<body>
+<div id="app">
+    <div class="main">
+
+        <div class="main__nav ">
+            <div class="main__logo">
+                <a href="index.html">
+                    <img src="src/img/svg-gobbler (5) 1.svg" alt="Gaming-News">
+                </a>
+                <!-- <p>Gaming News</p> -->
+            </div>
+            <div class="main__nav__button">
+                <a href="">Explore</a>
+                <a href="">Last News</a>
+            </div>
+            
+        </div>
+
+        <div class="main__content ">
+            <div class="main__content__text animate__animated animate__backInLeft">
+                <h2>
+                    Discover Games You Will Love
+                </h2>
+                <h1>
+                    Read news from <br> the gaming world
+                </h1>
+                <a href="#news">
+                    <button>Start Exploring
+                        <img src="src/img/angle-right 1.svg" alt="Arrow">
+                    </button>
+                </a>
+            </div>
+            <div class="main__content__text__image animate__animated animate__backInRight">
+                <img src="src/img/Group 1 (2).png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="trend">
+        <h1>Currently Trending Games</h1>
+        <div class="trend__games wow animate__animated animate__fadeInRight">
+            <div class="trend__games__game">
+                <div class="img">
+                    <img src="src/img/Rectangle 4.png" alt="">
+                </div>
+                
+                <p>
+                    <img src="src/img/flame 1.svg" alt=""> 50 followers
+                </p>
+            </div>
+            <div class="trend__games__game">
+                <div class="img">
+                    <img src="src/img/Rectangle 3-3.png" alt="">
+                </div>
+                
+                <p>
+                    <img src="src/img/flame 1.svg" alt=""> 45 followers
+                </p>
+            </div>
+            <div class="trend__games__game">
+                <div class="img">
+                    <img src="src/img/Rectangle 3-2.png" alt="">
+                </div>
+                
+                <p>
+                    <img src="src/img/flame 1.svg" alt=""> 51 followers
+                </p>
+            </div>
+            <div class="trend__games__game">
+                <div class="img">
+                    <img src="src/img/Rectangle 3-1.png" alt="">
+                </div>
+                
+                <p>
+                    <img src="src/img/flame 1.svg" alt=""> 64 followers
+                </p>
+            </div>
+            <div class="trend__games__game ">
+                <div class="img">
+                    <img src="src/img/Rectangle 3.png" alt="">
+                </div>
+                
+                <p>
+                    <img src="src/img/flame 1.svg" alt=""> 44 followers
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="news" id="news">
+        <div class="news__title">
+            <h1>What’s news</h1>
+            <button @click="refresh">
+                <img src="src/img/refresh 1.svg" alt="">
+                Refresh
+            </button>
+        </div>
+        <div class="news__news">
+            <div class="news__section">
+                <div v-for="(news, id) in newsList" :key="id" class=" news__section__block wow animate__animated animate__fadeInLeft">
+                    <div class="news__img">
+                        <img src="src/img/svg-gobbler (5) 1 (1).svg" alt="">
+                    </div>
+                    <div class="news__info">
+                        <div class="news__info__category">
+                            <img src="src/img/svg-gobbler 1.svg" alt="News">
+                            News
+                        </div>
+                        <h1>
+                            {{news.title}}
+                        </h1>
+                        
+                        <a :href="news.url"><button>Read</button></a>
+                        <div class="news__source">
+                            <img src="src/img/111.svg" alt="">
+                            <p>independentUk</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="pushStep" @click="pushStep()">Show more</button>
+            </div>
+            <div class="news__subscribe wow animate__animated animate__fadeInRight">
+                <img src="src/img/Group 6.svg" alt="">
+                <h1>Subscribe to our newsletter</h1>
+                <p>
+                    Keep in touch with current gaming now <br> and upcoming games news
+                </p>
+                <form action="">
+                    <input type="email" placeholder="Enter your email">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="footer__content">
+            <p>Gaming News © 2022</p>
+            <a href="https://rapidapi.com/alexaustin9816-BYtbNAGYg_K/api/gaming-news/">With RapidApi - Gaming News</a>
+        </div>
+        <a href="#app" class="toUp">
+            <img src="src/img/arrow-small-left 1.svg" alt="">
+            UP
+        </a>
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
