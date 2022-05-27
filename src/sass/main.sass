@@ -3,14 +3,24 @@
     margin: 0
     padding: 0
 *
+    
     scroll-behavior: smooth
 body
+    overflow-x: hidden
     background-color: #13112E
+html
 
 #app
     width: 1920px
+.navbar-fixed-top.scrolled 
+  backdrop-filter: blur(20px)
+  transition: all 0.5s ease-in-out;
+  width: 100vw
+  z-index: 9
+  transform: translateY(-60px)
+  color: white
 .main
-
+    transition: all 0.5s ease-in-out;
     padding-top: 60px
     height: 100vh
     width: 100vw
@@ -19,11 +29,28 @@ body
     background-size: cover
     
     &__nav
+        transition: all 200ms linear
+        position: fixed
         padding-left: 170px
         padding-right: 170px
         display: flex
-        justify-content: space-between
+        justify-content: flex-start
         align-items: center
+        &__button
+             a
+                transition: all .2s ease-in-out
+                &:nth-last-child(3)
+                    color: white
+                    font-size: 20px
+                    margin-left: -1rem
+                &:nth-last-child(2)
+                    margin-left: 4rem
+                &:nth-last-child(1)
+                    // margin-left: 4rem
+                &:hover
+                    color: white
+                    z-index: 999
+
         a
             font-family: 'Montserrat';
             font-style: normal;
@@ -127,7 +154,7 @@ body
             flex-direction: column
             justify-content: center
             align-items: center
-            
+            cursor: pointer
             .img
                 transition: all 0.3s ease-in-out
                 border-radius: 35px;
@@ -153,9 +180,11 @@ body
                 color: #FFFFFF;
 .news
     margin-top: 145px
+    
     img
         border-radius: 8px
         transition: all 0.3s ease-in-out
+        
     &__title
         display: flex
         margin-left: 174px
@@ -334,7 +363,10 @@ body
         display: flex
         justify-content: center
         align-items: center
-        background: rgba(80, 77, 124, 0.39);
+        // background: url("../img/1.jpg") !important
+        background-repeat: no-repeat !important
+        background-size: cover !important
+        //background: rgba(80, 77, 124, 0.39);
         border-radius: 30px;
     &__info
         margin-left: 40px
@@ -385,20 +417,39 @@ body
                 transform: scale(1.1)
                 cursor: pointer
     &__source
-        margin-top: 26px
+        margin-top: 3rem
         display: flex
+        cursor: pointer
         justify-content: flex-start
         align-items: center
         p
             font-family: 'Montserrat';
             font-style: normal;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 15px;
             line-height: 28px;
             /* identical to box height */
 
 
             color: #FFFFFF;
+        transition: all 0.3s ease-in-out
+        &:hover
+            .imgSource
+                background-color: rgba(224, 0, 0, 0.63)
+                box-shadow: 0px 0px 37px 1px rgba(224, 0, 0, 0.63);
+            
+.imgSource
+    width: 40px;
+    height: 40px;
+    border-radius: 50%
+    display: flex
+    transition: all 0.3s ease-in-out
+    justify-content: center
+    align-items: center
+    // background: url("../img/gef.svg") !important
+    // background-repeat: no-repeat !important
+    // background-size: contain !important
+    margin-right: 1rem
 .footer
     position: relative
     height: 200px

@@ -9,18 +9,31 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <link rel="stylesheet" href="src/css/main.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/vue@3"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar-fixed-top");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
     <title>Gamin-News</title>
 </head>
 <body>
 <div id="app">
     <div class="main">
 
-        <div class="main__nav ">
+        <div class="main__nav navbar-fixed-top">
             <div class="main__logo">
                 <a href="index.html">
                     <img src="src/img/svg-gobbler (5) 1.svg" alt="Gaming-News">
@@ -28,8 +41,9 @@
                 <!-- <p>Gaming News</p> -->
             </div>
             <div class="main__nav__button">
-                <a href="">Explore</a>
-                <a href="">Last News</a>
+                <a href="">GAMING NEWS</a>
+                <a href="#lastnews">Last News</a>
+                <a href="#lastnews">Subscribe</a>
             </div>
             
         </div>
@@ -57,7 +71,8 @@
     <div class="trend">
         <h1>Currently Trending Games</h1>
         <div class="trend__games wow animate__animated animate__fadeInRight">
-            <div class="trend__games__game">
+            
+            <div class="trend__games__game" @click="openUrl('https://www.epicgames.com/fortnite/ru/home')">
                 <div class="img">
                     <img src="src/img/Rectangle 4.png" alt="">
                 </div>
@@ -65,8 +80,10 @@
                 <p>
                     <img src="src/img/flame 1.svg" alt=""> 50 followers
                 </p>
-            </div>
-            <div class="trend__games__game">
+            </div>    
+
+            
+            <div class="trend__games__game" @click="openUrl('https://store.steampowered.com/app/1147560/Skul_The_Hero_Slayer/')">
                 <div class="img">
                     <img src="src/img/Rectangle 3-3.png" alt="">
                 </div>
@@ -75,7 +92,8 @@
                     <img src="src/img/flame 1.svg" alt=""> 45 followers
                 </p>
             </div>
-            <div class="trend__games__game">
+            
+            <div class="trend__games__game" @click="openUrl('https://playvalorant.com/ru-ru/')" >
                 <div class="img">
                     <img src="src/img/Rectangle 3-2.png" alt="">
                 </div>
@@ -84,7 +102,7 @@
                     <img src="src/img/flame 1.svg" alt=""> 51 followers
                 </p>
             </div>
-            <div class="trend__games__game">
+            <div class="trend__games__game" @click="openUrl('https://store.steampowered.com/app/588650/Dead_Cells/')" >
                 <div class="img">
                     <img src="src/img/Rectangle 3-1.png" alt="">
                 </div>
@@ -93,7 +111,7 @@
                     <img src="src/img/flame 1.svg" alt=""> 64 followers
                 </p>
             </div>
-            <div class="trend__games__game ">
+            <div class="trend__games__game " @click="openUrl('https://store.steampowered.com/app/1240440/Halo_Infinite/')">
                 <div class="img">
                     <img src="src/img/Rectangle 3.png" alt="">
                 </div>
@@ -113,11 +131,11 @@
                 Refresh
             </button>
         </div>
-        <div class="news__news">
+        <div class="news__news" id="lastnews">
             <div class="news__section">
                 <div v-for="(news, id) in newsList" :key="id" class=" news__section__block wow animate__animated animate__fadeInLeft">
-                    <div class="news__img">
-                        <img src="src/img/svg-gobbler (5) 1 (1).svg" alt="">
+                    <div class="news__img" :style="news.bg">
+                        <!-- <img src="src/img/svg-gobbler (5) 1 (1).svg" alt=""> -->
                     </div>
                     <div class="news__info">
                         <div class="news__info__category">
@@ -129,8 +147,10 @@
                         </h1>
                         
                         <a :href="news.url"><button>Read</button></a>
-                        <div class="news__source">
-                            <img src="src/img/111.svg" alt="">
+                        <div class="news__source" @click="openUrl('https://www.independent.co.uk/')">
+                            <div class="imgSource">
+                                <img width="40" src="src/img/gef.svg" alt="">
+                            </div>
                             <p>independentUk</p>
                         </div>
                     </div>
@@ -145,7 +165,7 @@
                 </p>
                 <form action="">
                     <input type="email" placeholder="Enter your email">
-                    <button>Subscribe</button>
+                    <button type="submit">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -168,6 +188,7 @@
     <script>
         new WOW().init();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 </html>
