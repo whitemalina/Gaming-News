@@ -2,6 +2,7 @@ const { createApp } = Vue;
 const options = {
   method: "GET",
   headers: {
+    "Access-Control-Allow-Origin": "*",
     "X-RapidAPI-Host": "gaming-news.p.rapidapi.com",
     "X-RapidAPI-Key": "bdfbeeb0b1msh85778f6f18922a0p137b2bjsn943b41484846",
   },
@@ -15,7 +16,7 @@ createApp({
     };
   },
   async mounted() {
-    await fetch("https://gaming-news.p.rapidapi.com/news", options)
+    await fetch("//gaming-news.p.rapidapi.com/news", options)
       .then((response) => response.json())
       .then((response) => (this.news = response))
       .catch((err) => console.error(err));
